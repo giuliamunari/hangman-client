@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux'
-import hangman from './hangman'
+import game from './game'
 export default combineReducers ({
-    hangman
+    game
 })

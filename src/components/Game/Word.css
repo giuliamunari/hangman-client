@@ -1,18 +1,9 @@
-.word{
-    float: none;
-}
-.word::after{
-    clear: both;
-    display: block;
-    content: ''
-}
-.word div{
-    float: left;
+.letter {
+    display: inline-block;
     width: 30px;
     padding: 10px 0;
     text-align: center;
     margin: 10px;
-    border-bottom: 1px solid #000;
     text-transform: uppercase;
+    font-size: 30px;
 }
-.letter{visibility: hidden}

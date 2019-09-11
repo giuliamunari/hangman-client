@@ -1,4 +1,4 @@
-Hangman is an application made with React and Redux to play the hangman game.
+[Hangman](https://hangman-react-redux.netlify.com/) is an application made with React and Redux to play the hangman game.
 
 ## Table of content
 * [How to start](#How-to-start)

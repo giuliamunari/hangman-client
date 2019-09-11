@@ -1,6 +1,4 @@
-//import { words } from '../constants'
-
-const words = ['order']
+import { words } from '../constants'
 export const RANDOM_WORD = 'RANDOM_WORD'
 export const WRONG_CHARACTER = 'WRONG_CHARACTER'
 export const RIGHT_CHARACTER = 'RIGHT_CHARACTER'

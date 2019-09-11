@@ -1,0 +1,17 @@
+.hangman {
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+    margin: 10px auto;
+    border-radius: 50px
+}
+
+.hangman img {
+    width: 300px;
+    width: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0
+}

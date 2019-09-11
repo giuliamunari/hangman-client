@@ -3,13 +3,13 @@ import { connect } from 'react-redux'
 import Loader from '../Loader/Loader'
 import Form from './Form'
 import Word from './Word'
-import { 
+import {
     getRandomWord,
     guessCharacter
- } from '../../actions/game'
+} from '../../actions/game'
 
 class GameContainer extends Component {
-    state = { character: ''}
+    state = { character: '' }
     componentDidMount() {
         this.props.getRandomWord()
     }
@@ -29,18 +29,25 @@ class GameContainer extends Component {
                 {!this.props.gameWord &&
                     <Loader />
                 }
-                {(this.props.gameWord && this.props.status==='open') &&
+                {(this.props.gameWord && this.props.status === 'open') &&
                     <div>
+                        <h1>Guess the word</h1>
                         <Word word={this.props.displayWord} />
                         <Form
                             onSubmit={this.onSubmit}
                             onChange={this.onChange}
                             value={this.state.character}
                         />
+                        <Word word={this.props.attempts} />
                     </div>
                 }
-                {!(this.props.status==='open') &&
-                    <button onClick={this.componentDidMount}>Start a New Game</button>
+                {(this.props.status && this.props.status !== 'open') &&
+                    <div>
+                        <h1>{this.props.status}</h1>
+                        <h2>Your score: {this.props.points}</h2>
+                        <h2>{this.props.gameWord}</h2>
+                        <button onClick={this.componentDidMount}>Start a New Game</button>
+                    </div>
                 }
             </div>
         )
@@ -48,10 +55,10 @@ class GameContainer extends Component {
 }
 
 function mapStateToProps(state) {
-    const { 
-        gameWord, 
-        displayWord, 
-        points, 
+    const {
+        gameWord,
+        displayWord,
+        points,
         attempts,
         status } = state.game
 

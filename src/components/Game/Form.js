@@ -4,7 +4,7 @@ export default function Form(props) {
     return (
         <div>
             <form onSubmit={props.onSubmit} className='letterForm'>
-                <label>Insert a letter or a number</label>
+                <h2>Insert a letter or a number</h2>
                 <input
                     type='text'
                     name='character'

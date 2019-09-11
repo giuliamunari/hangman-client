@@ -58,7 +58,7 @@ function gameOver(character, state) {
         payload: {
             points: points - 2,
             attempts: [...attempts, character],
-            status: 'game over'
+            status: 'Game Over'
         }
     }
 }
@@ -67,7 +67,7 @@ function win() {
     return {
         type: WIN,
         payload: {
-            status: 'win'
+            status: 'You Won!'
         }
     }
 }
